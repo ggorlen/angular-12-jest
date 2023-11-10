@@ -5,8 +5,8 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/setupJest.ts"],
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/dist/"],
   // reporters: [["jest-reporter", {}]],
-  globals: {
-    "ts-jest": {
+  transform: {
+    "^.+\\.tsx?$": ["jest-preset-angular", {
       packageJson: "<rootDir>/package.json",
       tsconfig: "<rootDir>/tsconfig.spec.json",
       stringifyContentPathRegex: "\\.html$",
@@ -14,6 +14,6 @@ module.exports = {
         "<rootDir>/node_modules/jest-preset-angular/build/InlineFilesTransformer",
         "<rootDir>/node_modules/jest-preset-angular/build/StripStylesTransformer",
       ],
-    },
+    }],
   },
 };
