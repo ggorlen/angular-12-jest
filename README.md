@@ -7,5 +7,5 @@ Simple app with Angular and Jest.
 ```
 npm i
 npm run test
-ng-serve
+npm run serve
 ```
